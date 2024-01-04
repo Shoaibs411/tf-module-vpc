@@ -17,7 +17,7 @@ resource "aws_subnet" "private_subnet" {
 
   vpc_id     = aws_vpc.main.id
   cidr_block = element(var.PRIVATE_SUBNET_CIDR, count.index)
-    availability_zone   = element(var.AZ, count.index)
+  availability_zone   = element(var.AZ, count.index)
 
   tags = {
     Name = "roboshop-${var.ENV}-private-subnet-${count.index+1}"
