@@ -12,8 +12,8 @@ resource "aws_nat_gateway" "ngw" {
   subnet_id     = aws_subnet.public_subnet.*.id[0]
 
   tags = {
-    Name = "roboshop-${var.ENV}-ngw"
+    Name        = "roboshop-${var.ENV}-ngw"
   }
 
-  depends_on = [aws_internet_gateway.igw, aws_eip.ngw_eip]
+  depends_on    = [aws_internet_gateway.igw, aws_eip.ngw_eip]
 }
