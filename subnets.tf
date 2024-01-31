@@ -8,7 +8,7 @@ resource "aws_subnet" "public_subnet" {
   map_public_ip_on_launch     = true
 
   tags = {
-    Name = "roboshop-${var.ENV}-public-subnet-${count.index+1}"
+    Name                      = "roboshop-${var.ENV}-public-subnet-${count.index+1}"
   }
 }
 
